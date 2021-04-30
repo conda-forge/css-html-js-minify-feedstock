@@ -10,7 +10,7 @@ source:
   sha256: 4a9f11f7e0496f5284d12111f3ba4ff5ff2023d12f15d195c9c48bd97013746c
 
 build:
-  number: 3
+  number: 4
   entry_points:
     - css-html-js-minify = css_html_js_minify.minify:main
   script: "{{ PYTHON }} -m pip install . -vv"
@@ -37,6 +37,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - mxr-conda
     - ndmaxar
     - oblute
     - rluria14
