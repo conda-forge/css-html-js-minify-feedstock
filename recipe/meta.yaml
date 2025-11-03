@@ -6,11 +6,11 @@ package:
   version: "{{ version }}"
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip"
+  url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip"
   sha256: 4a9f11f7e0496f5284d12111f3ba4ff5ff2023d12f15d195c9c48bd97013746c
 
 build:
-  number: 8
+  number: 9
   entry_points:
     - css-html-js-minify = css_html_js_minify.minify:main
   script: "{{ PYTHON }} -m pip install . -vv"
@@ -22,6 +22,7 @@ requirements:
   host:
     - pip
     - python
+    - setuptools
   run:
     - python
 
@@ -40,7 +41,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - fwcarter
     - mxr-conda
     - ndmaxar
     - oblute
